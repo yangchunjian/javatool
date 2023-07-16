@@ -24,7 +24,7 @@ I/O（**I**nput/**O**utpu） 即**输入／输出** 。
 
 根据冯.诺依曼结构，计算机结构分为 5 大部分：运算器、控制器、存储器、输入设备、输出设备。
 
-![冯诺依曼体系结构](https://oss.javaguide.cn/github/javaguide/java/io/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9pcy1jbG91ZC5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70.jpeg)
+![冯诺依曼体系结构](https://oss.dearloc.com/github/javaguide/java/io/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9pcy1jbG91ZC5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70.jpeg)
 
 输入设备（比如键盘）和输出设备（比如显示器）都属于外部设备。网卡、硬盘这种既可以属于输入设备，也可以属于输出设备。
 
@@ -104,7 +104,7 @@ IO 多路复用模型中，线程首先发起 select 调用，询问内核数据
 
 Java 中的 NIO ，有一个非常重要的**选择器 ( Selector )** 的概念，也可以被称为 **多路复用器**。通过它，只需要一个线程便可以管理多个客户端连接。当客户端数据到了之后，才会为其服务。
 
-![Buffer、Channel和Selector三者之间的关系](https://oss.javaguide.cn/github/javaguide/java/nio/channel-buffer-selector.png)
+![Buffer、Channel和Selector三者之间的关系](https://oss.dearloc.com/github/javaguide/java/nio/channel-buffer-selector.png)
 
 ### AIO (Asynchronous I/O)
 
@@ -118,7 +118,7 @@ AIO 也就是 NIO 2。Java 7 中引入了 NIO 的改进版 NIO 2,它是异步 IO
 
 最后，来一张图，简单总结一下 Java 中的 BIO、NIO、AIO。
 
-![BIO、NIO 和 AIO 对比](https://oss.javaguide.cn/github/javaguide/java/nio/bio-aio-nio.png)
+![BIO、NIO 和 AIO 对比](https://oss.dearloc.com/github/javaguide/java/nio/bio-aio-nio.png)
 
 ## 参考
 

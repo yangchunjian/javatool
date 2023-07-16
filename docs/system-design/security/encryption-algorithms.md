@@ -18,7 +18,7 @@ tag:
 
 哈希算法也叫哈希函数、散列函数或摘要算法，它的作用是对任意长度的数据生成一个固定长度的唯一标识，也叫哈希值、散列值或消息摘要（后文统称为哈希值）。
 
-![哈希算法效果演示](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/hash-function-effect-demonstration.png)
+![哈希算法效果演示](https://oss.dearloc.com/github/javaguide/system-design/security/encryption-algorithms/hash-function-effect-demonstration.png)
 
 哈希值的作用是可以用来验证数据的完整性和一致性。
 
@@ -61,7 +61,7 @@ Java 提供了对 MD 算法系列的支持，包括 MD2、MD5。
 MD5 代码示例（未加盐）：
 
 ```java
-String originalString = "Java学习 + 面试指南：javaguide.cn";
+String originalString = "Java学习 + 面试指南：dearloc.com";
 // 创建MD5摘要对象
 MessageDigest messageDigest = MessageDigest.getInstance("MD5");
 messageDigest.update(originalString.getBytes(StandardCharsets.UTF_8));
@@ -76,7 +76,7 @@ System.out.println("SHA-256 Hash: " + hexString.toLowerCase());
 输出：
 
 ```bash
-Original String: Java学习 + 面试指南：javaguide.cn
+Original String: Java学习 + 面试指南：dearloc.com
 SHA-256 Hash: fb246796f5b1b60d4d0268c817c608fa
 ```
 
@@ -104,7 +104,7 @@ Java 提供了对 SHA 算法系列的支持，包括 SHA-1、SHA-256、SHA-384 �
 SHA-256 代码示例（未加盐）：
 
 ```java
-String originalString = "Java学习 + 面试指南：javaguide.cn";
+String originalString = "Java学习 + 面试指南：dearloc.com";
 // 创建SHA-256摘要对象
 MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
 messageDigest.update(originalString.getBytes());
@@ -119,7 +119,7 @@ System.out.println("SHA-256 Hash: " + hexString.toLowerCase());
 输出：
 
 ```bash
-Original String: Java学习 + 面试指南：javaguide.cn
+Original String: Java学习 + 面试指南：dearloc.com
 SHA-256 Hash: 184eb7e1d7fb002444098c9bde3403c6f6722c93ecfac242c0e35cd9ed3b41cd
 ```
 
@@ -144,7 +144,7 @@ public PasswordEncoder passwordEncoder(){
 
 对称加密算法是指加密和解密使用同一个密钥的算法，也叫共享密钥加密算法。
 
-![对称加密](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/symmetric-encryption.png)
+![对称加密](https://oss.dearloc.com/github/javaguide/system-design/security/encryption-algorithms/symmetric-encryption.png)
 
 常见的对称加密算法有 DES、3DES、AES 等。
 
@@ -156,7 +156,7 @@ DES（Data Encryption Standard）使用 64 位的密钥(有效秘钥长度为 56
 
 DES 加密算法的基本思想是将 64 位的明文分成两半，然后对每一半进行多轮的变换，最后再合并成 64 位的密文。这些变换包括置换、异或、选择、移位等操作，每一轮都使用了一个子密钥，而这些子密钥都是由同一个 56 位的主密钥生成的。DES 加密算法总共进行了 16 轮变换，最后再进行一次逆置换，得到最终的密文。
 
-![DES（Data Encryption Standard）](https://oss.javaguide.cn/github/javaguide/system-design/security/des-steps.jpg)
+![DES（Data Encryption Standard）](https://oss.dearloc.com/github/javaguide/system-design/security/des-steps.jpg)
 
 这是一个经典的对称加密算法，但也有明显的缺陷，即 56 位的密钥安全性不足，已被证实可以在短时间内破解。
 
@@ -176,11 +176,11 @@ AES 也是一种分组(或者叫块)密码，分组长度只能是 128 位，也
 
 AES 的速度比 3DES 快，而且更安全。
 
-![AES（Advanced Encryption Standard）](https://oss.javaguide.cn/github/javaguide/system-design/security/aes-steps.jpg)
+![AES（Advanced Encryption Standard）](https://oss.dearloc.com/github/javaguide/system-design/security/aes-steps.jpg)
 
 DES 算法和 AES 算法简单对比（图片来自于：[RSA vs. AES Encryption: Key Differences Explained](https://cheapsslweb.com/blog/rsa-vs-aes-encryption)）：
 
-![DES 和 AES 对比](https://oss.javaguide.cn/github/javaguide/system-design/security/des-vs-aes.png)
+![DES 和 AES 对比](https://oss.dearloc.com/github/javaguide/system-design/security/des-vs-aes.png)
 
 基于 Java 实现 AES 算法代码示例：
 
@@ -231,7 +231,7 @@ public static String decrypt(String encryptedData) throws Exception {
 }
 
 public static void main(String[] args) throws Exception {
-    String originalString = "Java学习 + 面试指南：javaguide.cn";
+    String originalString = "Java学习 + 面试指南：dearloc.com";
     init();
     String encryptedData = encrypt(originalString);
     String decryptedData = decrypt(encryptedData);
@@ -244,9 +244,9 @@ public static void main(String[] args) throws Exception {
 输出：
 
 ```bash
-Original String: Java学习 + 面试指南：javaguide.cn
+Original String: Java学习 + 面试指南：dearloc.com
 AES Encrypted Data : E1qTkK91suBqToag7WCyoFP9uK5hR1nSfM6p+oBlYj71bFiIVnk5TsQRT+zpjv8stha7oyKi3jQ=
-AES Decrypted Data : Java学习 + 面试指南：javaguide.cn
+AES Decrypted Data : Java学习 + 面试指南：dearloc.com
 ```
 
 ## 非对称加密
@@ -255,7 +255,7 @@ AES Decrypted Data : Java学习 + 面试指南：javaguide.cn
 
 如果用公钥加密数据，只能用对应的私钥解密（加密）；如果用私钥加密数据，只能用对应的公钥解密（签名）。这样就可以实现数据的安全传输和身份认证。
 
-![非对称加密](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/asymmetric-encryption.png)
+![非对称加密](https://oss.dearloc.com/github/javaguide/system-design/security/encryption-algorithms/asymmetric-encryption.png)
 
 常见的非对称加密算法有 RSA、DSA、ECC 等。
 
@@ -269,7 +269,7 @@ RSA 算法的优点是简单易用，可以用于数据加密和数字签名；�
 
 RSA 算法是是目前应用最广泛的非对称加密算法，像 SSL/TLS、SSH 等协议中就用到了 RSA 算法。
 
-![HTTPS 证书签名算法中带RSA 加密的SHA-256 ](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/https-rsa-sha-256.png)
+![HTTPS 证书签名算法中带RSA 加密的SHA-256 ](https://oss.dearloc.com/github/javaguide/system-design/security/encryption-algorithms/https-rsa-sha-256.png)
 
 基于 Java 实现 RSA 算法代码示例：
 
@@ -311,7 +311,7 @@ public static void main(String[] args) throws Exception {
     KeyPair keyPair = generateKeyPair();
     PublicKey publicKey = keyPair.getPublic();
     PrivateKey privateKey = keyPair.getPrivate();
-    String originalString = "Java学习 + 面试指南：javaguide.cn";
+    String originalString = "Java学习 + 面试指南：dearloc.com";
     String encryptedData = encrypt(originalString, publicKey);
     String decryptedData = decrypt(encryptedData, privateKey);
     System.out.println("Original String: " + originalString);
@@ -323,9 +323,9 @@ public static void main(String[] args) throws Exception {
 输出：
 
 ```bash
-Original String: Java学习 + 面试指南：javaguide.cn
+Original String: Java学习 + 面试指南：dearloc.com
 RSA Encrypted Data : T9ey/CEPUAhZm4UJjuVNIg8RPd1fQ32S9w6+rvOKxmuMumkJY2daFfWuCn8A73Mk5bL6TigOJI0GHfKOt/W2x968qLM3pBGCcPX17n4pR43f32IIIz9iPdgF/INOqDxP5ZAtCDvTiuzcSgDHXqiBSK5TDjtj7xoGjfudYAXICa8pWitnqDgJYoo2J0F8mKzxoi8D8eLE455MEx8ZT1s7FUD/z7/H8CfShLRbO9zq/zFI06TXn123ufg+F4lDaq/5jaIxGVEUB/NFeX4N6OZCFHtAV32mw71BYUadzI9TgvkkUr1rSKmQ0icNhnRdKedJokGUh8g9QQ768KERu92Ibg==
-RSA Decrypted Data : Java学习 + 面试指南：javaguide.cn
+RSA Decrypted Data : Java学习 + 面试指南：dearloc.com
 ```
 
 ### DSA
@@ -341,7 +341,7 @@ DSA 算法签名过程：
 3. 将原始数据和数字签名一起通过互联网传送给接收方。
 4. 接收方用发送方的公钥对数字签名进行解密，得到信息摘要。同时，接收方也用消息摘要算法对收到的原始数据进行加密，得到另一个信息摘要。接收方将两个信息摘要进行比较，如果两者一致，则说明在传送过程中数据没有被篡改或损坏；否则，则说明数据已经失去了安全性和保密性。
 
-![DSA 算法签名过程](https://oss.javaguide.cn/github/javaguide/system-design/security/encryption-algorithms/dsa-algorithm-signing-process.png)
+![DSA 算法签名过程](https://oss.dearloc.com/github/javaguide/system-design/security/encryption-algorithms/dsa-algorithm-signing-process.png)
 
 ## 总结
 

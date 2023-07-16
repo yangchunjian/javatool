@@ -130,7 +130,7 @@ QUEUED
 
 Redis 官网相关介绍 [https://redis.io/topics/transactions](https://redis.io/topics/transactions) 如下：
 
-![Redis 事务](https://oss.javaguide.cn/github/javaguide/database/redis/redis-transactions.png)
+![Redis 事务](https://oss.dearloc.com/github/javaguide/database/redis/redis-transactions.png)
 
 ### Redis 事务支持原子性吗？
 
@@ -145,7 +145,7 @@ Redis 事务在运行错误的情况下，除了执行过程中出现错误的�
 
 Redis 官网也解释了自己为啥不支持回滚。简单来说就是 Redis 开发者们觉得没必要支持回滚，这样更简单便捷并且性能更好。Redis 开发者觉得即使命令执行错误也应该在开发过程中就被发现而不是生产过程中。
 
-![Redis 为什么不支持回滚](https://oss.javaguide.cn/github/javaguide/database/redis/redis-rollback.png)
+![Redis 为什么不支持回滚](https://oss.dearloc.com/github/javaguide/database/redis/redis-rollback.png)
 
 **相关 issue** :
 
@@ -189,7 +189,7 @@ Redis 从 2.6 版本开始支持执行 Lua 脚本，它的功能和事务非常�
 除了下面介绍的内容之外，再推荐两篇不错的文章：
 
 - [你的 Redis 真的变慢了吗？性能优化如何做 - 阿里开发者](https://mp.weixin.qq.com/s/nNEuYw0NlYGhuKKKKoWfcQ)
-- [Redis 常见阻塞原因总结 - JavaGuide](https://javaguide.cn/database/redis/redis-common-blocking-problems-summary.html)
+- [Redis 常见阻塞原因总结 - JavaGuide](https://dearloc.com/database/redis/redis-common-blocking-problems-summary.html)
 
 ### 使用批量操作减少网络传输
 
@@ -227,7 +227,7 @@ Redis 中有一些原生支持批量操作的命令，比如：
 
 > Redis Cluster 并没有使用一致性哈希，采用的是 **哈希槽分区** ，每一个键值对都属于一个 **hash slot**（哈希槽） 。当客户端发送命令请求的时候，需要先根据 key 通过上面的计算公示找到的对应的哈希槽，然后再查询哈希槽和节点的映射关系，即可找到目标 Redis 节点。
 >
-> 我在 [Redis 集群详解（付费）](https://javaguide.cn/database/redis/redis-cluster.html) 这篇文章中详细介绍了 Redis Cluster 这部分的内容，感兴趣地可以看看。
+> 我在 [Redis 集群详解（付费）](https://dearloc.com/database/redis/redis-cluster.html) 这篇文章中详细介绍了 Redis Cluster 这部分的内容，感兴趣地可以看看。
 
 #### pipeline
 
@@ -248,7 +248,7 @@ Redis 中有一些原生支持批量操作的命令，比如：
 
 > 事务可以看作是一个原子操作，但其实并不满足原子性。当我们提到 Redis 中的原子操作时，主要指的是这个操作（比如事务、Lua 脚本）不会被其他操作（比如其他事务、Lua 脚本）打扰，并不能完全保证这个操作中的所有写命令要么都执行要么都不执行。这主要也是因为 Redis 是不支持回滚操作。
 
-![](https://oss.javaguide.cn/github/javaguide/database/redis/redis-pipeline-vs-transaction.png)
+![](https://oss.dearloc.com/github/javaguide/database/redis/redis-pipeline-vs-transaction.png)
 
 另外，pipeline 不适用于执行顺序有依赖关系的一批命令。就比如说，你需要将前一个命令的结果给后续的命令使用，pipeline 就没办法满足你的需求了。对于这种需求，我们可以使用 **Lua 脚本** 。
 
@@ -335,7 +335,7 @@ Biggest string found '"ballcat:oauth:refresh_auth:f6cdb384-9a9d-4f2f-af01-dc3f28
 
 这里以阿里云 Redis 为例说明，它支持 bigkey 实时分析、发现，文档地址：<https://www.alibabacloud.com/help/zh/apsaradb-for-redis/latest/use-the-real-time-key-statistics-feature> 。
 
-![阿里云Key分析](https://oss.javaguide.cn/github/javaguide/database/redis/aliyun-key-analysis.png)
+![阿里云Key分析](https://oss.dearloc.com/github/javaguide/database/redis/aliyun-key-analysis.png)
 
 #### 如何处理 bigkey？
 
@@ -422,7 +422,7 @@ OK
 
 京东零售的 [hotkey](https://gitee.com/jd-platform-opensource/hotkey) 这个项目不光支持 hotkey 的发现，还支持 hotkey 的处理。
 
-![京东零售开源的 hotkey](https://oss.javaguide.cn/github/javaguide/database/redis/jd-hotkey.png)
+![京东零售开源的 hotkey](https://oss.dearloc.com/github/javaguide/database/redis/jd-hotkey.png)
 
 **4、根据业务情况提前预估。**
 
@@ -438,7 +438,7 @@ OK
 
 这里以阿里云 Redis 为例说明，它支持 hotkey 实时分析、发现，文档地址：<https://www.alibabacloud.com/help/zh/apsaradb-for-redis/latest/use-the-real-time-key-statistics-feature> 。
 
-![阿里云Key分析](https://oss.javaguide.cn/github/javaguide/database/redis/aliyun-key-analysis.png)
+![阿里云Key分析](https://oss.dearloc.com/github/javaguide/database/redis/aliyun-key-analysis.png)
 
 #### 如何解决 hotkey？
 
@@ -452,7 +452,7 @@ hotkey 的常见处理以及优化办法如下（这些方法可以配合起来�
 
 这里以阿里云 Redis 为例说明，它支持通过代理查询缓存功能（Proxy Query Cache）优化热点 Key 问题。
 
-![通过阿里云的Proxy Query Cache优化热点Key问题](https://oss.javaguide.cn/github/javaguide/database/redis/aliyun-hotkey-proxy-query-cache.png)
+![通过阿里云的Proxy Query Cache优化热点Key问题](https://oss.dearloc.com/github/javaguide/database/redis/aliyun-hotkey-proxy-query-cache.png)
 
 ### 慢查询命令
 
@@ -559,7 +559,7 @@ OK
 1. 什么是内存碎片?为什么会有 Redis 内存碎片?
 2. 如何清理 Redis 内存碎片？
 
-**参考答案**：[Redis 内存碎片详解](https://javaguide.cn/database/redis/redis-memory-fragmentation.html)。
+**参考答案**：[Redis 内存碎片详解](https://dearloc.com/database/redis/redis-memory-fragmentation.html)。
 
 ## Redis 生产问题（重要）
 
@@ -569,7 +569,7 @@ OK
 
 缓存穿透说简单点就是大量请求的 key 是不合理的，**根本不存在于缓存中，也不存在于数据库中** 。这就导致这些请求直接到了数据库上，根本没有经过缓存这一层，对数据库造成了巨大的压力，可能直接就被这么多请求弄宕机了。
 
-![缓存穿透](https://oss.javaguide.cn/github/javaguide/database/redis/redis-cache-penetration.png)
+![缓存穿透](https://oss.dearloc.com/github/javaguide/database/redis/redis-cache-penetration.png)
 
 举个例子：某个黑客故意制造一些非法的 key 发起大量请求，导致大量请求落到数据库，结果数据库上也没有查到对应的数据。也就是说这些请求最终都落到了数据库上，对数据库造成了巨大的压力。
 
@@ -614,7 +614,7 @@ public Object getObjectInclNullById(Integer id) {
 
 加入布隆过滤器之后的缓存处理流程图如下。
 
-![加入布隆过滤器之后的缓存处理流程图](https://oss.javaguide.cn/github/javaguide/database/redis/redis-cache-penetration-bloom-filter.png)
+![加入布隆过滤器之后的缓存处理流程图](https://oss.dearloc.com/github/javaguide/database/redis/redis-cache-penetration-bloom-filter.png)
 
 但是，需要注意的是布隆过滤器可能会存在误判的情况。总结来说就是：**布隆过滤器说某个元素存在，小概率会误判。布隆过滤器说某个元素不在，那么这个元素一定不在。**
 
@@ -632,7 +632,7 @@ _为什么会出现误判的情况呢? 我们还要从布隆过滤器的原理�
 
 然后，一定会出现这样一种情况：**不同的字符串可能哈希出来的位置相同。** （可以适当增加位数组大小或者调整我们的哈希函数来降低概率）
 
-更多关于布隆过滤器的内容可以看我的这篇原创：[《不了解布隆过滤器？一文给你整的明明白白！》](https://javaguide.cn/cs-basics/data-structure/bloom-filter/) ，强烈推荐，个人感觉网上应该找不到总结的这么明明白白的文章了。
+更多关于布隆过滤器的内容可以看我的这篇原创：[《不了解布隆过滤器？一文给你整的明明白白！》](https://dearloc.com/cs-basics/data-structure/bloom-filter/) ，强烈推荐，个人感觉网上应该找不到总结的这么明明白白的文章了。
 
 ### 缓存击穿
 
@@ -640,7 +640,7 @@ _为什么会出现误判的情况呢? 我们还要从布隆过滤器的原理�
 
 缓存击穿中，请求的 key 对应的是 **热点数据** ，该数据 **存在于数据库中，但不存在于缓存中（通常是因为缓存中的那份数据已经过期）** 。这就可能会导致瞬时大量的请求直接打到了数据库上，对数据库造成了巨大的压力，可能直接就被这么多请求弄宕机了。
 
-![缓存击穿](https://oss.javaguide.cn/github/javaguide/database/redis/redis-cache-breakdown.png)
+![缓存击穿](https://oss.dearloc.com/github/javaguide/database/redis/redis-cache-breakdown.png)
 
 举个例子：秒杀进行过程中，缓存中的某个秒杀商品的数据突然过期，这就导致瞬时大量对该商品的请求直接落到数据库上，对数据库造成了巨大的压力。
 
@@ -666,7 +666,7 @@ _为什么会出现误判的情况呢? 我们还要从布隆过滤器的原理�
 
 另外，缓存服务宕机也会导致缓存雪崩现象，导致所有的请求都落到了数据库上。
 
-![缓存雪崩](https://oss.javaguide.cn/github/javaguide/database/redis/redis-cache-avalanche.png)
+![缓存雪崩](https://oss.dearloc.com/github/javaguide/database/redis/redis-cache-avalanche.png)
 
 举个例子：数据库中的大量数据在同一时间过期，这个时候突然有大量的请求需要访问这些过期的数据。这就导致大量的请求直接落到数据库上，对数据库造成了巨大的压力。
 
@@ -704,7 +704,7 @@ Cache Aside Pattern 中遇到写请求是这样的：更新 DB，然后直接删
 
 ### 哪些情况可能会导致 Redis 阻塞？
 
-单独抽了一篇文章来总结可能会导致 Redis 阻塞的情况：[Redis 常见阻塞原因总结](https://javaguide.cn/database/redis/redis-common-blocking-problems-summary.html)。
+单独抽了一篇文章来总结可能会导致 Redis 阻塞的情况：[Redis 常见阻塞原因总结](https://dearloc.com/database/redis/redis-common-blocking-problems-summary.html)。
 
 ## Redis 集群
 
@@ -728,7 +728,7 @@ Cache Aside Pattern 中遇到写请求是这样的：更新 DB，然后直接删
 6. Redis Cluster 扩容缩容期间可以提供服务吗？
 7. Redis Cluster 中的节点是怎么进行通信的？
 
-**参考答案**：[Redis 集群详解（付费）](https://javaguide.cn/database/redis/redis-cluster.html)。
+**参考答案**：[Redis 集群详解（付费）](https://dearloc.com/database/redis/redis-cluster.html)。
 
 ## Redis 使用规范
 

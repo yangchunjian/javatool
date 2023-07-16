@@ -15,7 +15,7 @@ category: 走近作者
 
 下面这张是当时拍的毕业照（后排最中间的就是我）：
 
-![](https://oss.javaguide.cn/javaguide/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D.png)
+![](https://oss.dearloc.com/javaguide/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D.png)
 
 ## 我坚持写了多久博客？
 
@@ -37,7 +37,7 @@ category: 走近作者
 
 下面这张是我大三去三亚的时候拍的：
 
-![](https://oss.javaguide.cn/javaguide/psc.jpeg)
+![](https://oss.dearloc.com/javaguide/psc.jpeg)
 
 其实，我在大学就这么努力地开始赚钱，也主要是因为家庭条件太一般，父母赚钱都太辛苦了！也正是因为我自己迫切地想要减轻父母的负担，所以才会去尝试这么多赚钱的方法。
 
@@ -63,4 +63,4 @@ category: 走近作者
 
 生活本就是有苦有甜。共勉！
 
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
+![JavaGuide 官方公众号](https://oss.dearloc.com/github/javaguide/gongzhonghaoxuanchuan.png)

@@ -11,7 +11,7 @@ tag:
 
 这 7 个阶段的顺序如下图所示：
 
-![一个类的完整生命周期](https://oss.javaguide.cn/github/javaguide/java/jvm/lifecycle-of-a-class.png)
+![一个类的完整生命周期](https://oss.dearloc.com/github/javaguide/java/jvm/lifecycle-of-a-class.png)
 
 ## 类加载过程
 
@@ -19,7 +19,7 @@ tag:
 
 系统加载 Class 类型的文件主要三步：**加载->连接->初始化**。连接过程又可分为三步：**验证->准备->解析**。
 
-![类加载过程](https://oss.javaguide.cn/github/javaguide/java/jvm/class-loading-procedure.png)
+![类加载过程](https://oss.dearloc.com/github/javaguide/java/jvm/class-loading-procedure.png)
 
 详见 [Java Virtual Machine Specification - 5.3. Creation and Loading](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-5.html#jvms-5.3 "Java Virtual Machine Specification - 5.3. Creation and Loading")。
 
@@ -35,7 +35,7 @@ tag:
 
 加载这一步主要是通过我们后面要讲到的 **类加载器** 完成的。类加载器有很多种，当我们想要加载一个类的时候，具体是哪个类加载器加载由 **双亲委派模型** 决定（不过，我们也能打破由双亲委派模型）。
 
-> 类加载器、双亲委派模型也是非常重要的知识点，这部分内容在[类加载器详解](https://javaguide.cn/java/jvm/classloader.html "类加载器详解")这篇文章中有详细介绍到。阅读本篇文章的时候，大家知道有这么个东西就可以了。
+> 类加载器、双亲委派模型也是非常重要的知识点，这部分内容在[类加载器详解](https://dearloc.com/java/jvm/classloader.html "类加载器详解")这篇文章中有详细介绍到。阅读本篇文章的时候，大家知道有这么个东西就可以了。
 
 每个 Java 类都有一个引用指向加载它的 `ClassLoader`。不过，数组类不是通过 `ClassLoader` 创建的，而是 JVM 在需要的时候自动创建的，数组类通过`getClassLoader()`方法获取 `ClassLoader` 的时候和该数组的元素类型的 `ClassLoader` 是一致的。
 
@@ -58,13 +58,13 @@ tag:
 3. 字节码验证（程序语义检查）
 4. 符号引用验证（类的正确性检查）
 
-![验证阶段示意图](https://oss.javaguide.cn/github/javaguide/java/jvm/class-loading-process-verification.png)
+![验证阶段示意图](https://oss.dearloc.com/github/javaguide/java/jvm/class-loading-process-verification.png)
 
 文件格式验证这一阶段是基于该类的二进制字节流进行的，主要目的是保证输入的字节流能正确地解析并存储于方法区之内，格式上符合描述一个 Java 类型信息的要求。除了这一阶段之外，其余三个验证阶段都是基于方法区的存储结构上进行的，不会再直接读取、操作字节流了。
 
 > 方法区属于是 JVM 运行时数据区域的一块逻辑区域，是各个线程共享的内存区域。当虚拟机要使用一个类时，它需要读取并解析 Class 文件获取相关信息，再将信息存入到方法区。方法区会存储已被虚拟机加载的 **类信息、字段信息、方法信息、常量、静态变量、即时编译器编译后的代码缓存等数据**。
 >
-> 关于方法区的详细介绍，推荐阅读 [Java 内存区域详解](https://javaguide.cn/java/jvm/memory-area.html "Java 内存区域详解") 这篇文章。
+> 关于方法区的详细介绍，推荐阅读 [Java 内存区域详解](https://dearloc.com/java/jvm/memory-area.html "Java 内存区域详解") 这篇文章。
 
 符号引用验证发生在类加载过程中的解析阶段，具体点说是 JVM 将符号引用转化为直接引用的时候（解析阶段会介绍符号引用和直接引用）。
 
@@ -93,7 +93,7 @@ tag:
 
 《深入理解 Java 虚拟机》7.34 节第三版对符号引用和直接引用的解释如下：
 
-![符号引用和直接引用](https://oss.javaguide.cn/github/javaguide/java/jvm/symbol-reference-and-direct-reference.png)
+![符号引用和直接引用](https://oss.dearloc.com/github/javaguide/java/jvm/symbol-reference-and-direct-reference.png)
 
 举个例子：在程序执行方法时，系统需要明确知道这个方法所在的位置。Java 虚拟机为每个类都准备了一张方法表来存放类中所有的方法。当需要调用一个类的方法的时候，只要知道这个方法在方法表中的偏移量就可以直接调用该方法了。通过解析操作符号引用就可以直接转变为目标方法在类中方法表的位置，从而使得方法可以被调用。
 

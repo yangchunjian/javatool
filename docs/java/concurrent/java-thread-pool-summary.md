@@ -39,7 +39,7 @@ tag:
 
 如下图所示，包括任务执行机制的核心接口 **`Executor`** ，以及继承自 `Executor` 接口的 **`ExecutorService` 接口。`ThreadPoolExecutor`** 和 **`ScheduledThreadPoolExecutor`** 这两个关键类实现了 **`ExecutorService`** 接口。
 
-![](https://oss.javaguide.cn/github/javaguide/java/concurrent/executor-class-diagram.png)
+![](https://oss.dearloc.com/github/javaguide/java/concurrent/executor-class-diagram.png)
 
 这里提了很多底层的类关系，但是，实际上我们需要更多关注的是 `ThreadPoolExecutor` 这个类，这个类在我们实际使用线程池的过程中，使用频率还是非常高的。
 
@@ -161,7 +161,7 @@ Spring 通过 `ThreadPoolTaskExecutor` 或者我们直接通过 `ThreadPoolExecu
 
 对应 `Executors` 工具类中的方法如图所示：
 
-![](https://oss.javaguide.cn/github/javaguide/java/concurrent/executors-inner-threadpool.png)
+![](https://oss.dearloc.com/github/javaguide/java/concurrent/executors-inner-threadpool.png)
 
 《阿里巴巴 Java 开发手册》强制线程池不允许使用 `Executors` 去创建，而是通过 `ThreadPoolExecutor` 构造函数的方式，这样的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险
 
@@ -401,7 +401,7 @@ Finished all threads  // 任务全部执行完了才会跳出来，因为executo
 3. 如果向任务队列投放任务失败（任务队列已经满了），但是当前运行的线程数是小于最大线程数的，就新建一个线程来执行任务。
 4. 如果当前运行的线程数已经等同于最大线程数了，新建线程将会使当前运行的线程超出最大线程数，那么当前任务会被拒绝，饱和策略会调用`RejectedExecutionHandler.rejectedExecution()`方法。
 
-![图解线程池实现原理](https://oss.javaguide.cn/github/javaguide/java/concurrent/thread-pool-principle.png)
+![图解线程池实现原理](https://oss.dearloc.com/github/javaguide/java/concurrent/thread-pool-principle.png)
 
 在 `execute` 方法中，多次调用 `addWorker` 方法。`addWorker` 这个方法主要用来创建新的工作线程，如果返回 true 说明创建和启动工作线程成功，否则的话返回的就是 false。
 
@@ -798,11 +798,11 @@ public class ScheduledThreadPoolExecutor
 - `Timer` 只有一个执行线程，因此长时间运行的任务可以延迟其他任务。 `ScheduledThreadPoolExecutor` 可以配置任意数量的线程。 此外，如果你想（通过提供 `ThreadFactory`），你可以完全控制创建的线程;
 - 在`TimerTask` 中抛出的运行时异常会杀死一个线程，从而导致 `Timer` 死机即计划任务将不再运行。`ScheduledThreadExecutor` 不仅捕获运行时异常，还允许您在需要时处理它们（通过重写 `afterExecute` 方法`ThreadPoolExecutor`）。抛出异常的任务将被取消，但其他任务将继续运行。
 
-关于定时任务的详细介绍，可以看这篇文章：[Java 定时任务详解](https://javaguide.cn/system-design/schedule-task.html) 。
+关于定时任务的详细介绍，可以看这篇文章：[Java 定时任务详解](https://dearloc.com/system-design/schedule-task.html) 。
 
 ## 线程池最佳实践
 
-[Java 线程池最佳实践](https://javaguide.cn/java/concurrent/java-thread-pool-best-practices.html)这篇文章总结了一些使用线程池的时候应该注意的东西，实际项目使用线程池之前可以看看。
+[Java 线程池最佳实践](https://dearloc.com/java/concurrent/java-thread-pool-best-practices.html)这篇文章总结了一些使用线程池的时候应该注意的东西，实际项目使用线程池之前可以看看。
 
 ## 参考
 

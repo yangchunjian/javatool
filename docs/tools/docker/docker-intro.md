@@ -41,7 +41,7 @@ tag:
 
 **容器：**
 
-![](https://oss.javaguide.cn/javaguide/image-20211110104003678.png)
+![](https://oss.dearloc.com/javaguide/image-20211110104003678.png)
 
 通过上面这三张抽象图，我们可以大概通过类比概括出：**容器虚拟化的是操作系统而不是硬件，容器之间是共享同一套操作系统资源的。虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统。因此容器的隔离级别会稍低一些。**
 
@@ -93,11 +93,11 @@ tag:
 
 传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
 
-![](https://oss.javaguide.cn/javaguide/2e2b95eebf60b6d03f6c1476f4d7c697.png)
+![](https://oss.dearloc.com/javaguide/2e2b95eebf60b6d03f6c1476f4d7c697.png)
 
 ### 3.2 容器与虚拟机总结
 
-![](https://oss.javaguide.cn/javaguide/4ef8691d67eb1eb53217099d0a691eb5.png)
+![](https://oss.dearloc.com/javaguide/4ef8691d67eb1eb53217099d0a691eb5.png)
 
 - **容器是一个应用层抽象，用于将代码和依赖资源打包在一起。** **多个容器可以在同一台机器上运行，共享操作系统内核，但各自作为独立的进程在用户空间中运行** 。与虚拟机相比， **容器占用的空间较少**（容器镜像大小通常只有几十兆），**瞬间就能完成启动** 。
 
@@ -109,7 +109,7 @@ tag:
 
 就我而言，对于两者无所谓谁会取代谁，而是两者可以和谐共存。
 
-![](https://oss.javaguide.cn/javaguide/056c87751b9dd7b56f4264240fe96d00.png)
+![](https://oss.dearloc.com/javaguide/056c87751b9dd7b56f4264240fe96d00.png)
 
 ---
 
@@ -243,7 +243,7 @@ docker rmi f6509bac4980 #  或者 docker rmi mysql
 
 如果你搜索 Docker 官网，会发现如下的字样：**“Docker - Build, Ship, and Run Any App, Anywhere”**。那么 Build, Ship, and Run 到底是在干什么呢？
 
-![](https://oss.javaguide.cn/github/javaguide/tools/docker/docker-build-ship-run.jpg)
+![](https://oss.dearloc.com/github/javaguide/tools/docker/docker-build-ship-run.jpg)
 
 - **Build（构建镜像）**：镜像就像是集装箱包括文件以及运行环境等等资源。
 - **Ship（运输镜像）**：主机和仓库间运输，这里的仓库就像是超级码头一样。

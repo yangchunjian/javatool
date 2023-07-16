@@ -1,12 +1,12 @@
-推荐你通过在线阅读网站进行阅读，体验更好，速度更快！地址：[javaguide.cn](https://javaguide.cn/)。
+推荐你通过在线阅读网站进行阅读，体验更好，速度更快！地址：[dearloc.com](https://dearloc.com/)。
 
-[<img src="https://oss.javaguide.cn/xingqiu/xingqiu.png" style="width:850px;margin: 0 auto" />](https://sourl.cn/e7ee87)
+[<img src="https://oss.dearloc.com/xingqiu/xingqiu.png" style="width:850px;margin: 0 auto" />](https://sourl.cn/e7ee87)
 
 <div align="center">
 
-[![logo](https://oss.javaguide.cn/github/javaguide/csdn/1c00413c65d1995993bf2b0daf7b4f03.png)](https://github.com/Snailclimb/JavaGuide)
+[![logo](https://oss.dearloc.com/github/javaguide/csdn/1c00413c65d1995993bf2b0daf7b4f03.png)](https://github.com/Snailclimb/JavaGuide)
 
-[![阅读](https://img.shields.io/badge/阅读-read-brightgreen.svg)](https://javaguide.cn/)
+[![阅读](https://img.shields.io/badge/阅读-read-brightgreen.svg)](https://dearloc.com/)
 ![Stars](https://img.shields.io/github/stars/Snailclimb/JavaGuide)
 ![forks](https://img.shields.io/github/forks/Snailclimb/JavaGuide)
 ![issues](https://img.shields.io/github/issues/Snailclimb/JavaGuide)
@@ -22,17 +22,17 @@
 > - **转载须知**：以下所有文章如非文首说明为转载皆为 JavaGuide 原创，转载请在文首注明出处。如发现恶意抄袭/搬运，会动用法律武器维护自己的权益。让我们一起维护一个良好的技术创作环境！
 
 <div align="center">
-  <img src="https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png" style="margin: 0 auto;" />  
+  <img src="https://oss.dearloc.com/github/javaguide/gongzhonghaoxuanchuan.png" style="margin: 0 auto;" />  
 </div>
 
 <!-- #region home -->
 
 ## 项目相关
 
-- [项目介绍](https://javaguide.cn/javaguide/intro.html)
-- [使用建议](https://javaguide.cn/javaguide/use-suggestion.html)
-- [贡献指南](https://javaguide.cn/javaguide/contribution-guideline.html)
-- [常见问题](https://javaguide.cn/javaguide/faq.html)
+- [项目介绍](https://dearloc.com/javaguide/intro.html)
+- [使用建议](https://dearloc.com/javaguide/use-suggestion.html)
+- [贡献指南](https://dearloc.com/javaguide/contribution-guideline.html)
+- [常见问题](https://dearloc.com/javaguide/faq.html)
 
 ## Java
 
@@ -245,7 +245,7 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 [Elasticsearch 常见面试题总结(付费)](./docs/database/elasticsearch/elasticsearch-questions-01.md)
 
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
+![JavaGuide 官方公众号](https://oss.dearloc.com/github/javaguide/gongzhonghaoxuanchuan.png)
 
 ## 开发工具
 
@@ -332,41 +332,41 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 ### 理论&算法&协议
 
-- [CAP 理论和 BASE 理论解读](https://javaguide.cn/distributed-system/protocol/cap-and-base-theorem.html)
-- [Paxos 算法解读](https://javaguide.cn/distributed-system/protocol/paxos-algorithm.html)
-- [Raft 算法解读](https://javaguide.cn/distributed-system/protocol/raft-algorithm.html)
-- [Gossip 协议详解](https://javaguide.cn/distributed-system/protocol/gossip-protocl.html)
+- [CAP 理论和 BASE 理论解读](https://dearloc.com/distributed-system/protocol/cap-and-base-theorem.html)
+- [Paxos 算法解读](https://dearloc.com/distributed-system/protocol/paxos-algorithm.html)
+- [Raft 算法解读](https://dearloc.com/distributed-system/protocol/raft-algorithm.html)
+- [Gossip 协议详解](https://dearloc.com/distributed-system/protocol/gossip-protocl.html)
 
 ### RPC
 
-- [RPC 基础知识总结](https://javaguide.cn/distributed-system/rpc/rpc-intro.html)
-- [Dubbo 常见知识点&面试题总结](https://javaguide.cn/distributed-system/rpc/dubbo.html)
+- [RPC 基础知识总结](https://dearloc.com/distributed-system/rpc/rpc-intro.html)
+- [Dubbo 常见知识点&面试题总结](https://dearloc.com/distributed-system/rpc/dubbo.html)
 
 ### ZooKeeper
 
 > 这两篇文章可能有内容重合部分，推荐都看一遍。
 
-- [ZooKeeper 相关概念总结(入门)](https://javaguide.cn/distributed-system/distributed-process-coordination/zookeeper/zookeeper-intro.html)
-- [ZooKeeper 相关概念总结(进阶)](https://javaguide.cn/distributed-system/distributed-process-coordination/zookeeper/zookeeper-plus.html)
+- [ZooKeeper 相关概念总结(入门)](https://dearloc.com/distributed-system/distributed-process-coordination/zookeeper/zookeeper-intro.html)
+- [ZooKeeper 相关概念总结(进阶)](https://dearloc.com/distributed-system/distributed-process-coordination/zookeeper/zookeeper-plus.html)
 
 ### API 网关
 
-- [API 网关基础知识总结](https://javaguide.cn/distributed-system/api-gateway.html)
+- [API 网关基础知识总结](https://dearloc.com/distributed-system/api-gateway.html)
 - [Spring Cloud Gateway 常见知识点&面试题总结](./docs/distributed-system/spring-cloud-gateway-questions.md)
 
 ### 分布式 ID
 
-- [分布式ID介绍&实现方案总结](https://javaguide.cn/distributed-system/distributed-id.html)
-- [分布式 ID 设计指南](https://javaguide.cn/distributed-system/distributed-id-design.html)
+- [分布式ID介绍&实现方案总结](https://dearloc.com/distributed-system/distributed-id.html)
+- [分布式 ID 设计指南](https://dearloc.com/distributed-system/distributed-id-design.html)
 
 ### 分布式锁
 
-- [分布式锁介绍](https://javaguide.cn/distributed-system/distributed-lock.html)
-- [分布式锁常见实现方案总结](https://javaguide.cn/distributed-system/distributed-lock-implementations.html)
+- [分布式锁介绍](https://dearloc.com/distributed-system/distributed-lock.html)
+- [分布式锁常见实现方案总结](https://dearloc.com/distributed-system/distributed-lock-implementations.html)
 
 ### 分布式事务
 
-[分布式事务常见知识点&面试题总结](https://javaguide.cn/distributed-system/distributed-transaction.html)
+[分布式事务常见知识点&面试题总结](https://dearloc.com/distributed-system/distributed-transaction.html)
 
 ### 分布式配置中心
 
@@ -439,6 +439,6 @@ JVM 这部分内容主要参考 [JVM 虚拟机规范-Java8 ](https://docs.oracle
 
 如果大家想要实时关注我更新的文章以及分享的干货的话，可以关注我的公众号。
 
-![JavaGuide 官方公众号](https://oss.javaguide.cn/github/javaguide/gongzhonghaoxuanchuan.png)
+![JavaGuide 官方公众号](https://oss.dearloc.com/github/javaguide/gongzhonghaoxuanchuan.png)
 
 <!-- #endregion home -->

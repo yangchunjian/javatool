@@ -7,7 +7,7 @@ import sidebar from "./sidebar/index.js";
 const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
-  hostname: "https://javaguide.cn/",
+  hostname: "https://dearloc.com/",
   logo: "/logo.png",
   favicon: "/favicon.ico",
 
@@ -15,7 +15,7 @@ export default hopeTheme({
 
   author: {
     name: "Guide",
-    url: "https://javaguide.cn/article/",
+    url: "https://dearloc.com/article/",
   },
 
   repo: "https://github.com/Snailclimb/JavaGuide",

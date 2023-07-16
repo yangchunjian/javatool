@@ -12,7 +12,7 @@ head:
       content: SPI 即 Service Provider Interface ，字面意思就是：“服务提供者的接口”，我的理解是：专门提供给服务提供者或者扩展框架功能的开发者去使用的一个接口。SPI 将服务接口和具体的服务实现分离开来，将服务调用方和服务实现者解耦，能够提升程序的扩展性、可维护性。修改或者替换服务实现并不需要修改调用方。
 ---
 
-> 本文来自 [Kingshion](https://github.com/jjx0708) 投稿。欢迎更多朋友参与到 JavaGuide 的维护工作，这是一件非常有意义的事情。详细信息请看：[JavaGuide 贡献指南](https://javaguide.cn/javaguide/contribution-guideline.html) 。
+> 本文来自 [Kingshion](https://github.com/jjx0708) 投稿。欢迎更多朋友参与到 JavaGuide 的维护工作，这是一件非常有意义的事情。详细信息请看：[JavaGuide 贡献指南](https://dearloc.com/javaguide/contribution-guideline.html) 。
 
 在面向对象的设计原则中，一般推荐模块之间基于接口编程，通常情况下调用方模块是不会感知到被调用方模块的内部具体实现。一旦代码里面涉及具体实现类，就违反了开闭原则。如果需要替换一种实现，就需要修改代码。
 
@@ -28,7 +28,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 很多框架都使用了 Java 的 SPI 机制，比如：Spring 框架、数据库加载驱动、日志接口、以及 Dubbo 的扩展实现等等。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/22e1830e0b0e4115a882751f6c417857tplv-k3u1fbpfcp-zoom-1.jpeg)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/22e1830e0b0e4115a882751f6c417857tplv-k3u1fbpfcp-zoom-1.jpeg)
 
 ### SPI 和 API 有什么区别？
 
@@ -36,7 +36,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 说到 SPI 就不得不说一下 API 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/1ebd1df862c34880bc26b9d494535b3dtplv-k3u1fbpfcp-watermark.png)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/1ebd1df862c34880bc26b9d494535b3dtplv-k3u1fbpfcp-watermark.png)
 
 一般模块之间都是通过通过接口进行通讯，那我们在服务调用方和服务实现方（也称服务提供者）之间引入一个“接口”。
 
@@ -50,7 +50,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 SLF4J （Simple Logging Facade for Java）是 Java 的一个日志门面（接口），其具体实现有几种，比如：Logback、Log4j、Log4j2 等等，而且还可以切换，在切换日志具体实现的时候我们是不需要更改项目代码的，只需要在 Maven 依赖里面修改一些 pom 依赖就好了。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/image-20220723213306039-165858318917813.png)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/image-20220723213306039-165858318917813.png)
 
 这就是依赖 SPI 机制实现的，那我们接下来就实现一个简易版本的日志框架。
 
@@ -222,11 +222,11 @@ public class Logback implements Logger {
 
 新建 lib 目录，然后将 jar 包拷贝过来，再添加到项目中。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/523d5e25198444d3b112baf68ce49daetplv-k3u1fbpfcp-watermark.png)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/523d5e25198444d3b112baf68ce49daetplv-k3u1fbpfcp-watermark.png)
 
 再点击 OK 。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/f4ba0aa71e9b4d509b9159892a220850tplv-k3u1fbpfcp-watermark.png)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/f4ba0aa71e9b4d509b9159892a220850tplv-k3u1fbpfcp-watermark.png)
 
 接下来就可以在项目中导入 jar 包里面的一些类和方法了，就像 JDK 工具类导包一样的。
 
@@ -246,7 +246,7 @@ public class Logback implements Logger {
 
 然后先导入 `Logger` 的接口 jar 包，再导入具体的实现类的 jar 包。
 
-![](https://oss.javaguide.cn/github/javaguide/java/basis/spi/image-20220723215812708-165858469599214.png)
+![](https://oss.dearloc.com/github/javaguide/java/basis/spi/image-20220723215812708-165858469599214.png)
 
 新建 Main 方法测试：
 

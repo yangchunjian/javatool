@@ -53,14 +53,14 @@ tag:
 
 ### Dubbo
 
-![](https://oss.javaguide.cn/github/javaguide/distributed-system/rpc/image-20220716111053081.png)
+![](https://oss.dearloc.com/github/javaguide/distributed-system/rpc/image-20220716111053081.png)
 
 Apache Dubbo 是一款微服务框架，为大规模微服务实践提供高性能 RPC 通信、流量治理、可观测性等解决方案，
 涵盖 Java、Golang 等多种语言 SDK 实现。
 
 Dubbo 提供了从服务定义、服务发现、服务通信到流量管控等几乎所有的服务治理能力，支持 Triple 协议（基于 HTTP/2 之上定义的下一代 RPC 通信协议）、应用级服务发现、Dubbo Mesh （Dubbo3 赋予了很多云原生友好的新特性）等特性。
 
-![](https://oss.javaguide.cn/github/javaguide/distributed-system/rpc/image-20220716111545343.png)
+![](https://oss.dearloc.com/github/javaguide/distributed-system/rpc/image-20220716111545343.png)
 
 Dubbo 是由阿里开源，后来加入了 Apache 。正是由于 Dubbo 的出现，才使得越来越多的公司开始使用以及接受分布式架构。
 
@@ -88,7 +88,7 @@ gRPC 是 Google 开源的一个高性能、通用的开源 RPC 框架。其由�
 
 **何谓 ProtoBuf？** [ProtoBuf（ Protocol Buffer）](https://github.com/protocolbuffers/protobuf) 是一种更加灵活、高效的数据格式，可用于通讯协议、数据存储等领域，基本支持所有主流编程语言且与平台无关。不过，通过 ProtoBuf 定义接口和数据类型还挺繁琐的，这是一个小问题。
 
-![](https://oss.javaguide.cn/github/javaguide/distributed-system/rpc/image-20220716104304033.png)
+![](https://oss.dearloc.com/github/javaguide/distributed-system/rpc/image-20220716104304033.png)
 
 不得不说，gRPC 的通信层的设计还是非常优秀的，[Dubbo-go 3.0](https://dubbogo.github.io/) 的通信层改进主要借鉴了 gRPC。
 
@@ -126,13 +126,13 @@ Dubbo 也是 Spring Cloud Alibaba 里面的一个组件。
 
 ## 如何设计并实现一个 RPC 框架？
 
-**《手写 RPC 框架》** 是我的[知识星球](https://javaguide.cn/about-the-author/zhishixingqiu-two-years.html)的一个内部小册，我写了 12 篇文章来讲解如何从零开始基于 Netty+Kyro+Zookeeper 实现一个简易的 RPC 框架。
+**《手写 RPC 框架》** 是我的[知识星球](https://dearloc.com/about-the-author/zhishixingqiu-two-years.html)的一个内部小册，我写了 12 篇文章来讲解如何从零开始基于 Netty+Kyro+Zookeeper 实现一个简易的 RPC 框架。
 
 麻雀虽小五脏俱全，项目代码注释详细，结构清晰，并且集成了 Check Style 规范代码结构，非常适合阅读和学习。
 
 **内容概览**：
 
-![](https://oss.javaguide.cn/github/javaguide/image-20220308100605485.png)
+![](https://oss.dearloc.com/github/javaguide/image-20220308100605485.png)
 
 ## 既然有了 HTTP 协议，为什么还要有 RPC ？
 
