@@ -1,7 +1,7 @@
 import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
-  { text: "面试指南", icon: "java", link: "/home.md" },
+  { text: "1面试指南", icon: "java", link: "/home.md" },
   { text: "开源项目", icon: "github", link: "/open-source-project/" },
   { text: "技术书籍", icon: "book", link: "/books/" },
   {
